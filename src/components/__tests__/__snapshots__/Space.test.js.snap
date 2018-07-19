@@ -1,0 +1,789 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Space /> matches snapshots 1`] = `
+<CollapsibleHeader
+  imageSource={
+    Object {
+      "uri": "Image",
+    }
+  }
+  onBackPress={[Function]}
+  title="Title"
+>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <ColumnNB>
+      <Styled(H1)>
+        Title
+      </Styled(H1)>
+      <Styled(Text)
+        caption={true}
+        darkGray={true}
+        ellipsizeMode="tail"
+        numberOfLines={2}
+      >
+        resource description
+      </Styled(Text)>
+    </ColumnNB>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "flexDirection": "row",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        focusedOpacity={0.7}
+        onPress={[Function]}
+      >
+        <Styled(Thumbnail)
+          source={
+            Object {
+              "uri": "user 1 image",
+            }
+          }
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+          tiny={true}
+        />
+      </TouchableOpacity>
+    </Styled(Body)>
+    <Styled(Right)>
+      <Styled(Button)
+        noPadding={true}
+        onPress={[Function]}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="add-circle"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+        />
+      </Styled(Button)>
+    </Styled(Right)>
+  </Styled(ListItem)>
+  <Styled(ViewNB)>
+    <Styled(ListItem)
+      itemDivider={true}
+    >
+      <Styled(Body)>
+        <Styled(Text)
+          title={true}
+        >
+          Events
+        </Styled(Text)>
+      </Styled(Body)>
+      <Styled(Right)>
+        <Styled(Button)
+          noPadding={true}
+          onPress={[Function]}
+          transparent={true}
+        >
+          <Styled(Text)>
+            See all
+          </Styled(Text)>
+        </Styled(Button)>
+      </Styled(Right)>
+    </Styled(ListItem)>
+    <HorizontalScrollView>
+      <CalendarEventView
+        event={
+          Object {
+            "endDate": +033658-09-27T01:46:40.000Z,
+            "id": "123",
+            "name": "Open",
+            "startDate": 1970-01-01T00:00:00.000Z,
+          }
+        }
+      />
+    </HorizontalScrollView>
+    <Styled(ListItem)
+      itemDivider={true}
+    >
+      <Styled(Body)>
+        <Styled(Text)
+          title={true}
+        >
+          Top Contacts
+        </Styled(Text)>
+      </Styled(Body)>
+      <Styled(Right)>
+        <Styled(Button)
+          noPadding={true}
+          onPress={[Function]}
+          transparent={true}
+        >
+          <Styled(Text)>
+            See all
+          </Styled(Text)>
+        </Styled(Button)>
+      </Styled(Right)>
+    </Styled(ListItem)>
+    <HorizontalScrollView />
+    <Styled(ListItem)
+      itemDivider={true}
+    >
+      <Styled(Body)>
+        <Styled(Text)
+          title={true}
+        >
+          Activity
+        </Styled(Text)>
+      </Styled(Body)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <Styled(Feed)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+      </Styled(Feed)>
+    </Styled(ListItem)>
+  </Styled(ViewNB)>
+</CollapsibleHeader>
+`;
+
+exports[`<Space /> matches snapshots 2`] = `
+<CollapsibleHeader
+  imageSource={
+    Object {
+      "uri": "Image",
+    }
+  }
+  onBackPress={[Function]}
+  title="Title"
+>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <ColumnNB>
+      <Styled(H1)>
+        Title
+      </Styled(H1)>
+      <Styled(Text)
+        caption={true}
+        darkGray={true}
+        ellipsizeMode="tail"
+        numberOfLines={2}
+      >
+        resource description
+      </Styled(Text)>
+    </ColumnNB>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "flexDirection": "row",
+          "overflow": "hidden",
+        }
+      }
+    />
+  </Styled(ListItem)>
+  <Styled(Button)
+    block={true}
+    bordered={false}
+    disabled={false}
+    primary={true}
+    style={
+      Object {
+        "marginHorizontal": 10,
+      }
+    }
+  >
+    <Styled(Text)>
+      Join
+    </Styled(Text)>
+  </Styled(Button)>
+</CollapsibleHeader>
+`;
+
+exports[`<Space /> matches snapshots 3`] = `
+<CollapsibleHeader
+  imageSource={
+    Object {
+      "uri": "Image",
+    }
+  }
+  onBackPress={[Function]}
+  title="Title"
+>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <ColumnNB>
+      <Styled(H1)>
+        Title
+      </Styled(H1)>
+      <Styled(Text)
+        caption={true}
+        darkGray={true}
+        ellipsizeMode="tail"
+        numberOfLines={2}
+      >
+        resource description
+      </Styled(Text)>
+    </ColumnNB>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "flexDirection": "row",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        focusedOpacity={0.7}
+        onPress={[Function]}
+      >
+        <Styled(Thumbnail)
+          source={
+            Object {
+              "uri": "user 1 image",
+            }
+          }
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+          tiny={true}
+        />
+      </TouchableOpacity>
+    </Styled(Body)>
+  </Styled(ListItem)>
+  <Styled(Button)
+    block={true}
+    bordered={false}
+    disabled={false}
+    primary={true}
+    style={
+      Object {
+        "marginHorizontal": 10,
+      }
+    }
+  >
+    <Styled(Text)>
+      Join
+    </Styled(Text)>
+  </Styled(Button)>
+</CollapsibleHeader>
+`;
+
+exports[`<Space /> matches snapshots 4`] = `
+<CollapsibleHeader
+  imageSource={
+    Object {
+      "uri": "Image",
+    }
+  }
+  onBackPress={[Function]}
+  title="Title"
+>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <ColumnNB>
+      <Styled(H1)>
+        Title
+      </Styled(H1)>
+      <Styled(Text)
+        caption={true}
+        darkGray={true}
+        ellipsizeMode="tail"
+        numberOfLines={2}
+      >
+        resource description
+      </Styled(Text)>
+    </ColumnNB>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "flexDirection": "row",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        focusedOpacity={0.7}
+        onPress={[Function]}
+      >
+        <Styled(Thumbnail)
+          source={
+            Object {
+              "uri": "user 1 image",
+            }
+          }
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+          tiny={true}
+        />
+      </TouchableOpacity>
+    </Styled(Body)>
+  </Styled(ListItem)>
+  <Styled(Button)
+    block={true}
+    bordered={false}
+    disabled={false}
+    primary={true}
+    style={
+      Object {
+        "marginHorizontal": 10,
+      }
+    }
+  >
+    <Styled(Text)>
+      Join
+    </Styled(Text)>
+  </Styled(Button)>
+</CollapsibleHeader>
+`;
+
+exports[`<Space /> matches snapshots 5`] = `
+<CollapsibleHeader
+  imageSource={
+    Object {
+      "uri": "Image",
+    }
+  }
+  onBackPress={[Function]}
+  title="Title"
+>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <ColumnNB>
+      <Styled(H1)>
+        Title
+      </Styled(H1)>
+      <Styled(Text)
+        caption={true}
+        darkGray={true}
+        ellipsizeMode="tail"
+        numberOfLines={2}
+      >
+        resource description
+      </Styled(Text)>
+    </ColumnNB>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "flexDirection": "row",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        focusedOpacity={0.7}
+        onPress={[Function]}
+      >
+        <Styled(Thumbnail)
+          source={
+            Object {
+              "uri": "user 1 image",
+            }
+          }
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+          tiny={true}
+        />
+      </TouchableOpacity>
+    </Styled(Body)>
+  </Styled(ListItem)>
+  <Styled(Button)
+    block={true}
+    bordered={false}
+    disabled={false}
+    primary={true}
+    style={
+      Object {
+        "marginHorizontal": 10,
+      }
+    }
+  >
+    <Styled(Text)>
+      Request To Join
+    </Styled(Text)>
+  </Styled(Button)>
+</CollapsibleHeader>
+`;
+
+exports[`<Space /> matches snapshots 6`] = `
+<CollapsibleHeader
+  imageSource={
+    Object {
+      "uri": "Image",
+    }
+  }
+  onBackPress={[Function]}
+  title="Title"
+>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <ColumnNB>
+      <Styled(H1)>
+        Title
+      </Styled(H1)>
+      <Styled(Text)
+        caption={true}
+        darkGray={true}
+        ellipsizeMode="tail"
+        numberOfLines={2}
+      >
+        resource description
+      </Styled(Text)>
+    </ColumnNB>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    noBorder={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "flexDirection": "row",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        focusedOpacity={0.7}
+        onPress={[Function]}
+      >
+        <Styled(Thumbnail)
+          source={
+            Object {
+              "uri": "user 1 image",
+            }
+          }
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+          tiny={true}
+        />
+      </TouchableOpacity>
+    </Styled(Body)>
+  </Styled(ListItem)>
+  <Styled(Button)
+    block={true}
+    bordered={true}
+    disabled={true}
+    primary={false}
+    style={
+      Object {
+        "marginHorizontal": 10,
+      }
+    }
+  >
+    <Styled(Text)>
+      Join Requested
+    </Styled(Text)>
+  </Styled(Button)>
+</CollapsibleHeader>
+`;

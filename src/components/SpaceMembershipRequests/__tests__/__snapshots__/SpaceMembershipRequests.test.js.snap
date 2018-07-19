@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpaceMembershipRequests /> matches snapshots 1`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body)
+      style={
+        Object {
+          "flex": 3,
+        }
+      }
+    >
+      <Styled(Title)>
+        Membership Requests
+      </Styled(Title)>
+    </Styled(Body)>
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)
+    contentContainerStyle={Object {}}
+    padder={false}
+  >
+    <Styled(ListItem)
+      itemHeader={true}
+    />
+    <Styled(List)
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<SpaceMembershipRequests /> matches snapshots 2`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body)
+      style={
+        Object {
+          "flex": 3,
+        }
+      }
+    >
+      <Styled(Title)>
+        Membership Requests
+      </Styled(Title)>
+    </Styled(Body)>
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)
+    contentContainerStyle={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+    padder={true}
+  >
+    <Styled(Text)
+      caption={true}
+    >
+      There are no membership requests for this space
+    </Styled(Text)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<SpaceMembershipRequests /> matches snapshots 3`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body)
+      style={
+        Object {
+          "flex": 3,
+        }
+      }
+    >
+      <Styled(Title)>
+        Membership Requests
+      </Styled(Title)>
+    </Styled(Body)>
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)
+    contentContainerStyle={Object {}}
+    padder={false}
+  >
+    <Styled(ListItem)
+      itemHeader={true}
+    />
+    <Styled(List)
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </Styled(Content)>
+</Styled(Container)>
+`;

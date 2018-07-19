@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpaceMemberRequestRow /> matches snapshots 1`] = `null`;
+
+exports[`<SpaceMemberRequestRow /> matches snapshots 2`] = `
+<Styled(ListItem)
+  last={true}
+  thumbnail={true}
+>
+  <Styled(Left)>
+    <Styled(Thumbnail)
+      source={
+        Object {
+          "uri": "Image",
+        }
+      }
+    />
+  </Styled(Left)>
+  <Styled(Body)>
+    <Styled(Text)>
+      Name
+    </Styled(Text)>
+    <Styled(Text)
+      note={true}
+    >
+      30 years ago
+    </Styled(Text)>
+    <RowNB
+      style={
+        Object {
+          "marginTop": 10,
+        }
+      }
+    >
+      <Styled(Button)
+        small={true}
+        style={
+          Object {
+            "marginRight": 10,
+          }
+        }
+      >
+        <Styled(Text)>
+          Approve
+        </Styled(Text)>
+      </Styled(Button)>
+      <Styled(Button)
+        bordered={true}
+        small={true}
+      >
+        <Styled(Text)>
+          Decline
+        </Styled(Text)>
+      </Styled(Button)>
+    </RowNB>
+  </Styled(Body)>
+  <Styled(Right) />
+</Styled(ListItem)>
+`;

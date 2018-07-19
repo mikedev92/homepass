@@ -1,0 +1,2386 @@
+input AcceptAccountMembershipInviteInput {
+  token: String!
+  clientMutationId: String
+}
+
+type AcceptAccountMembershipInvitePayload {
+  viewer: Viewer
+  account: Account
+  clientMutationId: String
+}
+
+# An account on homepass
+type Account implements Node {
+  # The ID of an object
+  id: ID!
+  accountId: String
+
+  # Name of the account
+  name: String
+
+  # A pubnub channel to listen on changes to account information
+  channel: String
+  status: String
+  type: String
+  imageUrl: String
+  imageUrlFilePickerUploadPath: String
+  phone: String
+  allowAutoJoin: Boolean
+  privateListings: Boolean
+  enableWelcomeSms: Boolean
+  smsFrom: String
+  primaryColor: String
+  accentColor: String
+  geometry: Geometry
+  addressComponents: [AddressComponent]
+
+  # This field can return an address string in any format requested by the client.
+  #
+  # Example:
+  # {{{streetNumber}}} {{streeName}} {{streetType}} will return a string in the format: '123 Fake St'
+  #
+  # The format argument will take any valid mustache template. Only the following values will be replaced:
+  #
+  # unitNo
+  #
+  # unitNumber
+  #
+  # unit_number
+  #
+  # subpremise
+  #
+  # streetNo
+  #
+  # streetNumber
+  #
+  # street_number
+  #
+  # street
+  #
+  # streetName
+  #
+  # street_address
+  #
+  # route
+  #
+  # streetType
+  #
+  # city
+  #
+  # suburb
+  #
+  # locality
+  #
+  # administrative_area_level_2
+  #
+  # state
+  #
+  # administrative_area_level_1
+  #
+  # zip
+  #
+  # postcode
+  #
+  # postal_code
+  #
+  # country
+  #
+  # countryName
+  #
+  # isoCountryCodeAlpha2
+  #
+  # countryCode
+  #
+  #
+  addressFormatted(
+    # String representing mustache template
+    format: String!
+  ): String
+  addressFormattedFull: String
+
+  # List of listings for this account
+  listings(before: String, after: String, first: Int, last: Int, includeArchived: Boolean = false, search: String, listingType: listingType): ListingConnection
+
+  # List of listings you are following
+  followedListings(before: String, after: String, first: Int, last: Int, includeArchived: Boolean = false, search: String, listingType: listingType): ListingConnection
+  offices: [Office]
+
+  # membership for the viewer of this account
+  viewerMembership: AccountMembership
+
+  # List of memberships for this account
+  memberships(after: String, first: Int, before: String, last: Int): AccountMembershipConnection
+
+  # List of membership invites for this account
+  membershipInvites(after: String, first: Int, before: String, last: Int): AccountMembershipInviteConnection
+
+  # List of CRM integrations for this account
+  crmIntegrations(after: String, first: Int, before: String, last: Int): AccountCrmIntegrationConnection
+
+  # List available of CRM integrations for this account
+  availableCrmIntegrations(after: String, first: Int, before: String, last: Int): AccountCrmIntegrationConnection
+
+  # a List of all opportunities created for this account
+  opportunities(after: String, first: Int, before: String, last: Int): OpportunityConnection
+  features: AccountFeatures
+  billing: Billing
+
+  # General contact search
+  searchContacts(before: String, after: String, first: Int, last: Int, search: String): ContactConnection
+
+  # Account contacts
+  contacts(before: String, after: String, first: Int, last: Int, search: String): ContactConnection
+  homeConnectionBranding: HomeConnectionBranding
+}
+
+# A connection to a list of items.
+type AccountConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [AccountEdge]
+}
+
+type AccountCrmIntegration {
+  # The ID of an object
+  id: ID!
+  officeId: String
+  externalSystemId: String
+  name: String
+  imageUrl: String
+  lastPolled: Date
+  firstPolled: Date
+}
+
+# A connection to a list of items.
+type AccountCrmIntegrationConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [AccountCrmIntegrationEdge]
+}
+
+# An edge in a connection.
+type AccountCrmIntegrationEdge {
+  # The item at the end of the edge
+  node: AccountCrmIntegration
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# An edge in a connection.
+type AccountEdge {
+  # The item at the end of the edge
+  node: Account
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type AccountFeatures {
+  setWelcomeSMS: Feature
+  setCustomBrochureBranding: Feature
+  manageHomeConnections: Feature
+  rentalApplicationManagement: Feature
+  billingManagement: Feature
+  contactsEnabled: Feature
+  bookingManagement: Feature
+}
+
+input AccountInfoInput {
+  accountId: String!
+  accountName: String!
+  officeIds: [String]
+  status: String!
+}
+
+# A notification that invite has been created for this account
+type AccountInviteResult {
+  # Lists of users that have been sent this invite
+  recipients: [InviteRecipient]
+  accountName: String
+}
+
+# A users membership for an account
+type AccountMembership implements Node {
+  # The ID of an object
+  id: ID!
+  accountMembershipId: String
+  user: User
+  role: String
+  status: String
+  createdAt: Date
+  modifiedAt: Date
+}
+
+# A connection to a list of items.
+type AccountMembershipConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [AccountMembershipEdge]
+}
+
+# An edge in a connection.
+type AccountMembershipEdge {
+  # The item at the end of the edge
+  node: AccountMembership
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# An invite to join an account
+type AccountMembershipInvite implements Node {
+  # The ID of an object
+  id: ID!
+  accountMembershipInviteId: String
+
+  # User that requested the invitee to join the account
+  invitedByUser: User
+
+  # Person that was sent the invite to join the account
+  invitee: AccountMembershipInvitee
+  status: String
+  createdAt: Date
+  modifiedAt: Date
+}
+
+# A connection to a list of items.
+type AccountMembershipInviteConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [AccountMembershipInviteEdge]
+}
+
+# The person that has been invited to an account
+type AccountMembershipInvitee {
+  name: String
+  email: String
+}
+
+# An edge in a connection.
+type AccountMembershipInviteEdge {
+  # The item at the end of the edge
+  node: AccountMembershipInvite
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input ActivatePlanForAccountInput {
+  accountId: String!
+  planId: String!
+  clientMutationId: String
+}
+
+type ActivatePlanForAccountPayload {
+  account: Account
+  clientMutationId: String
+}
+
+type Activity {
+  # The ID of an object
+  id: ID!
+  activityId: String
+  actor: Node
+  verb: String
+  target: Node
+  object: Node
+  time: Date
+}
+
+# A connection to a list of items.
+type ActivityConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [ActivityEdge]
+}
+
+# An edge in a connection.
+type ActivityEdge {
+  # The item at the end of the edge
+  node: Activity
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input AddAttachmentsInput {
+  listingId: String!
+  links: [FilePickerLinkInput]
+  clientMutationId: String
+}
+
+type AddAttachmentsPayload {
+  listing: Listing
+  clientMutationId: String
+}
+
+input AddAttendeeInput {
+  calendarEventId: String!
+  name: String!
+  email: Email!
+  mobile: Mobile
+  clientMutationId: String
+}
+
+type AddAttendeePayload {
+  calendarEvent: CalendarEvent
+  attendeeEdge: AttendeeEdge
+  attendee: Attendee
+  token: String
+  clientMutationId: String
+}
+
+input AddCalendarEventInput {
+  listingId: MongoObjectId!
+  visibility: calendarEventVisibility!
+  status: calendarEventStatusForAdd!
+  startDate: Date!
+  endDate: Date
+  clientMutationId: String
+}
+
+type AddCalendarEventPayload {
+  listing: Listing
+  calendarEventEdge: CalendarEventEdge
+  calendarEvent: CalendarEvent
+  clientMutationId: String
+}
+
+input AddCheckinInput {
+  ref: String!
+  checkinDate: Date!
+  notify: Boolean!
+  instrument: String!
+  applicationId: String!
+  listingId: String!
+  contactId: String
+  fullName: String
+  mobile: Phone
+  landline: Phone
+  email: String
+  countryCode: String
+  suburb: String
+  address: String
+  modifiedContactFields: [String]
+  passRef: String
+  customerRefId: String
+  contactNote: String
+  contactNoteShared: Boolean
+  inspectionNote: String
+  inspectionNoteShared: Boolean
+  addressPlaceId: String
+  attendeeId: String
+  clientMutationId: String
+}
+
+type AddCheckinPayload {
+  checkin: Checkin
+  listingContact: ListingContact
+  listing: Listing
+  clientMutationId: String
+}
+
+input AddContactInput {
+  attachToId: String!
+  attachToType: attachedToType!
+  contact: ContactInputType
+  clientMutationId: String
+}
+
+type AddContactPayload {
+  contactEdge: ContactEdge
+  contact: Contact
+  clientMutationId: String
+}
+
+input AddEmailToUserForAuth0JwtInput {
+  secondaryJWT: String!
+  clientMutationId: String
+}
+
+type AddEmailToUserForAuth0JwtPayload {
+  viewer: Viewer
+  clientMutationId: String
+}
+
+input AddIntegrationRefToListingInput {
+  listingId: String!
+  ref: String!
+  refSource: String!
+  clientMutationId: String
+}
+
+type AddIntegrationRefToListingPayload {
+  listing: Listing
+  clientMutationId: String
+}
+
+input AddMobileToUserForAuth0JwtInput {
+  secondaryJWT: String!
+  clientMutationId: String
+}
+
+type AddMobileToUserForAuth0JwtPayload {
+  viewer: Viewer
+  clientMutationId: String
+}
+
+input AddNoteInput {
+  text: String!
+  contactId: String!
+  attachedToId: String
+  attachedToType: AttachedToType
+  shared: Boolean!
+  isVendorComment: Boolean!
+  ref: String
+  refSource: String
+  clientMutationId: String
+}
+
+type AddNotePayload {
+  contact: Contact
+  note: Note
+  noteEdge: NoteEdge
+  clientMutationId: String
+}
+
+type Address1 {
+  unitNo: String
+  streetNumber: String
+  streetName: String
+  suburb: String
+  state: String
+  postcode: String
+  country: String
+}
+
+type Address2 {
+  unitNo: String
+  streetNumber: String
+  streetName: String
+  suburb: String
+  state: String
+  postcode: String
+  country: String
+}
+
+type AddressComponent {
+  longName: String
+  shortName: String
+  types: [String]
+}
+
+input AddressComponentInputAgent {
+  longName: String
+  shortName: String
+  types: [String]
+  _editIndex: Int
+  _operation: String
+}
+
+input AddVendorInput {
+  contact: ContactInputType
+  listingId: String!
+  clientMutationId: String
+}
+
+type AddVendorPayload {
+  vendor: Vendor
+  vendorEdge: VendorEdge
+  listing: Listing
+  clientMutationId: String
+}
+
+type agent implements Node {
+  # The ID of an object
+  id: ID!
+  agentId: String
+  name: String
+  email: String
+  imageUrl: String
+}
+
+enum allowedCalendarEventRequestType {
+  PUBLIC_ONLY
+  PUBLIC_PRIVATE
+}
+
+type ApplicationConfig {
+  filePickerApiKey: String
+  homepassWebUrl: String
+  homepassBrochureUrl: String
+  homepassApiUrl: String
+  auth0ClientId: String
+  layerDelegationUrl: String
+  layerAppId: String
+  pubnubSubscribeKey: String
+}
+
+# Rental application info
+type ApplicationDetails {
+  preferredCommencementDate: Date
+  leaseLength: String
+  rent: String
+  rentPeriod: String
+}
+
+input ApproveRentalApplicationInput {
+  opportunityId: String!
+  notifyApplicants: Boolean
+  inviteToConnect: Boolean
+  clientMutationId: String
+}
+
+type ApproveRentalApplicationPayload {
+  opportunity: RentalApplicationOpportunity
+  clientMutationId: String
+}
+
+input ArchiveListingInput {
+  listingId: String!
+  clientMutationId: String
+}
+
+type ArchiveListingPayload {
+  listing: Listing
+  account: Account
+  clientMutationId: String
+}
+
+enum attachedToType {
+  LISTING
+  ACCOUNT
+}
+
+enum AttachedToType {
+  LISTING
+}
+
+type Attachment implements Node {
+  # The ID of an object
+  id: ID!
+  attachmentId: String
+  createdAt: Date
+  modifiedAt: Date
+  url: String
+  mimeType: String
+  name: String
+  sizeInBytes: Int
+  ref: String
+  refSource: String
+}
+
+type Attendee implements Node {
+  # The ID of an object
+  id: ID!
+  attendeeId: String
+  createdAt: Date
+  modifiedAt: Date
+  name: String
+  email: String
+  mobile: String
+  imageUrl: String
+  status: String
+  contact: Contact
+  calendarEvent: CalendarEvent
+  checkin: Checkin
+}
+
+# A connection to a list of items.
+type AttendeeConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [AttendeeEdge]
+}
+
+# An edge in a connection.
+type AttendeeEdge {
+  # The item at the end of the edge
+  node: Attendee
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input AttendeeInputType {
+  name: String!
+  email: Email!
+  mobile: Mobile
+}
+
+enum attendeeStatus {
+  ACCEPTED
+  DECLINED
+  DELETED
+}
+
+input AutoJoinExistingAccountsInput {
+  clientMutationId: String
+}
+
+type AutoJoinExistingAccountsPayload {
+  viewer: Viewer
+  clientMutationId: String
+}
+
+# Contains all billing information related to an account
+type Billing {
+  initialized: Boolean
+  planId: String
+  canViewPlans: Boolean
+  selectablePlans: [String]
+  billingUrl: String
+  canManage: Boolean
+  portalUrl: String
+  updatePaymentUrl: String
+  email: String
+  creditCardLastFour: String
+  trialEnd: Date
+}
+
+type CalendarEvent implements Node {
+  # The ID of an object
+  id: ID!
+  calendarEventId: String
+  createdAt: Date
+  modifiedAt: Date
+  type: String
+  status: String
+  startDate: Date
+  endDate: Date
+  organiser: Node
+  visibility: String
+  listing: Listing
+
+  # Lists all attendees for this event.
+  attendees(after: String, first: Int, before: String, last: Int): AttendeeConnection
+}
+
+# A connection to a list of items.
+type CalendarEventConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [CalendarEventEdge]
+}
+
+# An edge in a connection.
+type CalendarEventEdge {
+  # The item at the end of the edge
+  node: CalendarEvent
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type CalendarEventSettingsForListing {
+  duration: Duration
+  allowedCalendarEventRequest: allowedCalendarEventRequestType
+}
+
+enum calendarEventStatus {
+  TENTATIVE
+  CONFIRMED
+  CANCELLED
+  DELETED
+}
+
+enum calendarEventStatusForAdd {
+  TENTATIVE
+  CONFIRMED
+}
+
+enum calendarEventVisibility {
+  PUBLIC
+  PRIVATE
+}
+
+type Checkin implements Node {
+  # The ID of an object
+  id: ID!
+  ref: String
+  checkinId: String
+  checkinDate: Date
+  deleted: Boolean
+  contact: Contact
+  listingContact: ListingContact
+}
+
+# A connection to a list of items.
+type CheckinConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [CheckinEdge]
+}
+
+# An edge in a connection.
+type CheckinEdge {
+  # The item at the end of the edge
+  node: Checkin
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# Information about the user who completed the rental application
+type ConsumerProfileDetails {
+  consumerUserId: String
+  personalDetails: PersonalDetails
+  livingSituations: [LivingSituation]
+  employmentHistory: [JobType]
+  identification: [Identification]
+  references: [ConsumerReference]
+  timezone: String
+}
+
+# Reference contact info
+type ConsumerReference {
+  fullName: String
+  relationship: String
+  countryCode: String
+  phone: String
+  email: String
+  _editIndex: Int
+  _operation: String
+}
+
+type Contact implements Node {
+  # The ID of an object
+  id: ID!
+  contactId: String
+  mobile: String
+  landline: String
+  email: String
+  firstName: String
+  lastName: String
+  fullName: String
+  imageUrl: String
+  customer: Customer
+  visits: Int
+  ref: String
+  address: String
+  addressComponents: [AddressComponent]
+
+  # This field can return an address string in any format requested by the client.
+  #
+  # Example:
+  # {{{streetNumber}}} {{streeName}} {{streetType}} will return a string in the format: '123 Fake St'
+  #
+  # The format argument will take any valid mustache template. Only the following values will be replaced:
+  #
+  # unitNo
+  #
+  # unitNumber
+  #
+  # unit_number
+  #
+  # subpremise
+  #
+  # streetNo
+  #
+  # streetNumber
+  #
+  # street_number
+  #
+  # street
+  #
+  # streetName
+  #
+  # street_address
+  #
+  # route
+  #
+  # streetType
+  #
+  # city
+  #
+  # suburb
+  #
+  # locality
+  #
+  # administrative_area_level_2
+  #
+  # state
+  #
+  # administrative_area_level_1
+  #
+  # zip
+  #
+  # postcode
+  #
+  # postal_code
+  #
+  # country
+  #
+  # countryName
+  #
+  # isoCountryCodeAlpha2
+  #
+  # countryCode
+  #
+  #
+  addressFormatted(
+    # String representing mustache template
+    format: String!
+  ): String
+
+  # List of activities for the contact
+  activities(after: String, first: Int, before: String, last: Int): ActivityConnection
+
+  # List of notes for the contact
+  notes(after: String, first: Int, before: String, last: Int): NoteConnection
+  unsubscribeBroadcast: Boolean
+}
+
+# A connection to a list of items.
+type ContactConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [ContactEdge]
+}
+
+# An edge in a connection.
+type ContactEdge {
+  # The item at the end of the edge
+  node: Contact
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input ContactInputType {
+  firstName: String
+  lastName: String
+  fullName: String
+  contactId: String
+  email: Email
+  mobile: Phone
+  landline: Phone
+  suburb: String
+  instrument: String
+  address: String
+  addressComponents: [AddressComponentInputAgent]
+  addressPlaceId: String
+  ref: String
+  editedDate: Date
+}
+
+input CreateAccountInput {
+  accountInfo: AccountInfoInput
+  clientMutationId: String
+}
+
+input CreateAccountMembershipInviteInput {
+  accountId: String!
+  name: String
+  email: String!
+  clientMutationId: String
+}
+
+type CreateAccountMembershipInvitePayload {
+  accountMembershipInviteEdge: AccountMembershipInviteEdge
+  account: Account
+  clientMutationId: String
+}
+
+type CreateAccountPayload {
+  invite: AccountInviteResult
+  accountEdge: AccountEdge
+  viewer: Viewer
+  clientMutationId: String
+}
+
+input CreateHomeConnectionOpportunityInput {
+  name: String!
+  email: String!
+  phone: String!
+  countryCode: String!
+  address: [AddressComponentInputAgent]
+  accountId: String!
+  clientMutationId: String
+}
+
+type CreateHomeConnectionOpportunityPayload {
+  account: Account
+  opportunityEdge: OpportunityEdge
+  clientMutationId: String
+}
+
+input CreateRentalApplicationOpportunityInput {
+  name: String!
+  email: String!
+  listingId: String!
+  clientMutationId: String
+}
+
+type CreateRentalApplicationOpportunityPayload {
+  listing: Listing
+  opportunityEdge: OpportunityEdge
+  clientMutationId: String
+}
+
+type Customer implements Node {
+  # The ID of an object
+  id: ID!
+  customerId: String
+  imageUrl: String
+}
+
+# Represents a date time. Format is standard ISO-8601 which is the format: YYYY-MM-DDTHH:mm:ss.sssZ
+scalar Date
+
+input DeleteIntegrationRefForListingInput {
+  listingId: String!
+  integrationRefId: String!
+  clientMutationId: String
+}
+
+type DeleteIntegrationRefForListingPayload {
+  listing: Listing
+  clientMutationId: String
+}
+
+input DeleteNoteInput {
+  noteId: String!
+  clientMutationId: String
+}
+
+type DeleteNotePayload {
+  contact: Contact
+  deletedNoteId: String
+  clientMutationId: String
+}
+
+type Duration {
+  amount: Int
+  unit: durationUnit
+}
+
+input DurationInput {
+  amount: Int
+  unit: durationUnit
+}
+
+enum durationUnit {
+  SECONDS
+  MINUTES
+  HOURS
+  DAYS
+  WEEKS
+  MONTHS
+  YEARS
+}
+
+input EditDomainCheckinEnabledForListingInput {
+  listingId: String!
+  domainCheckinEnabled: Boolean!
+  clientMutationId: String
+}
+
+type EditDomainCheckinEnabledForListingPayload {
+  listing: Listing
+  clientMutationId: String
+}
+
+input EditIntegrationRefForListingInput {
+  listingId: String!
+  integrationRefId: String!
+  ref: String!
+  clientMutationId: String
+}
+
+type EditIntegrationRefForListingPayload {
+  listing: Listing
+  clientMutationId: String
+}
+
+# Represents an email, whatever that looks like: benny@benny@homepass.com
+scalar Email
+
+type EmailAvailable {
+  isAvailable: Boolean
+  takenByMobile: String
+  takenByName: String
+  takenByImageUrl: String
+}
+
+# Emergeny contact info
+type EmergencyContact {
+  fullName: String
+  address: String
+  relationship: String
+  countryCode: String
+  phone: String
+  _operation: String
+}
+
+type EntityReference {
+  entityId: String
+  entityType: String
+
+  # The ID of an object
+  id: ID!
+  nodeId: String
+  displayName: String
+}
+
+type error {
+  errorMessage: String
+  errorCode: String
+}
+
+type ExternalSystem {
+  systemId: String
+  name: String
+}
+
+type Feature {
+  name: String
+  enabled: Boolean
+  descriptionWhenDisabled: String
+  hideWhenDisabled: Boolean
+  disabledType: String
+}
+
+# File metadata
+type File {
+  fileName: String
+  fileGUID: String
+  fileSize: Int
+  mimeType: String
+}
+
+input FilePickerLinkInput {
+  url: String
+  filename: String
+  mimetype: String
+  size: Int
+  id: Int
+  key: String
+  container: String
+  client: String
+  isWriteable: Boolean
+}
+
+input FollowListingInput {
+  listingId: String!
+  includeArchived: Boolean = false
+  clientMutationId: String
+}
+
+type FollowListingPayload {
+  listing: Listing
+  account: Account
+  followedListingsEdge: ListingEdge
+  clientMutationId: String
+}
+
+type Geometry {
+  location: Location
+}
+
+input GrantAccessForListingInput {
+  userId: String!
+  listingId: String!
+  clientMutationId: String
+}
+
+type GrantAccessForListingPayload {
+  listing: Listing
+  userEdge: UserEdge
+  clientMutationId: String
+}
+
+# The branding that should be used in the home connection applet
+type HomeConnectionBranding {
+  primaryColor: String
+  accentColor: String
+  agencyLogoUrl: String
+  headerImage: String
+  phone: String
+}
+
+type HomeConnectionOpportunity implements Node, Opportunity {
+  # The ID of an object
+  id: ID!
+  opportunityId: String
+  type: String
+  createdAt: String
+  createdBy: User
+  name: String
+  email: String
+  archived: Boolean
+  status: String
+  address: String
+  addressShort: String
+  activities: [HomeConnectionOpportunityActivity]
+  orders: [HomeConnectionOpportunityOrder]
+}
+
+type HomeConnectionOpportunityActivity {
+  actor: String
+  verb: String
+  object: String
+  time: String
+}
+
+type HomeConnectionOpportunityOrder {
+  title: String
+  createdAt: String
+  updatedAt: String
+  firstName: String
+  lastName: String
+  email: String
+  billerAddress: Address1
+  supplierAddress: Address2
+  connectionDate: String
+  productIds: [String]
+  purchaseId: String
+  status: String
+  statusDescription: error
+}
+
+# Information about a utility
+type HomeConnectionProduct implements Node {
+  # The ID of an object
+  id: ID!
+  brandLogo: String
+  retailerId: String
+  brand: String
+  productId: String
+  brandTitle: String
+  isConnection: String
+  shortDetails: String
+  contractDetails: String
+  contractText: String
+  cancellationFees: String
+  planDetails: String
+  planInfo: String
+  billingOptions: String
+  totalDiscountElectricity: String
+  totalDiscountGas: String
+  payOntimeDiscounts: String
+  emailBillingDiscounts: String
+  guarenteedDiscounts: String
+  otherDiscounts: String
+  retailerTermsConditions: String
+  retailerPrivacyPolicy: String
+  feeDetails: String
+  cost: String
+}
+
+# Identification info
+type Identification {
+  _editIndex: Int
+  _operation: String
+  idType: String
+  idDescription: String
+  idNumber: String @deprecated(reason: "We are now uploading files instead of doing manual entry")
+  idExtra: String @deprecated(reason: "We are now uploading files instead of doing manual entry")
+  idExpiration: Date @deprecated(reason: "We are now uploading files instead of doing manual entry")
+  idFile: File
+}
+
+type IdentityProvider {
+  provider: String
+  userId: String
+}
+
+type IngestFeed {
+  id: String
+  externalSystemId: String
+  name: String
+  lastRun: Date
+  imageUrl: String
+}
+
+type Integration {
+  listingIntegrationId: String
+  ref: String
+  refSource: String
+  imageUrl: String
+}
+
+# Describes the person that will receive an invite
+type InviteRecipient {
+  firstName: String
+  email: String
+}
+
+# Employment info
+type JobType {
+  situation: String
+  companyName: String
+  contactName: String
+  contactEmail: String
+  contactCountryCode: String
+  contactPhone: String
+  industry: String
+  occupation: String
+  startDate: Date
+  endDate: Date
+  salary: String
+  abn: String
+  acn: String
+  accountantName: String
+  accountantCountryCode: String
+  accountantPhone: String
+  lawyerName: String
+  lawyerCountryCode: String
+  lawyerPhone: String
+  _editIndex: Int
+  _operation: String
+  formattedCompanyAddress: String
+  companyAddress: [AddressComponent]
+}
+
+type JoinAccountRequest {
+  # The ID of an object
+  id: ID!
+  requestId: String
+  accountId: String
+  officeIds: [String]
+  accountName: String
+  status: String
+  createdAt: Date
+  modifiedAt: Date
+  address: String
+}
+
+# A connection to a list of items.
+type JoinAccountRequestConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [JoinAccountRequestEdge]
+}
+
+# An edge in a connection.
+type JoinAccountRequestEdge {
+  # The item at the end of the edge
+  node: JoinAccountRequest
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# Accepts any valid json object
+scalar Json
+
+input LinkAttendeeToCheckinInput {
+  attendeeId: String!
+  checkinId: String!
+  clientMutationId: String
+}
+
+type LinkAttendeeToCheckinPayload {
+  calendarEvent: CalendarEvent
+  attendee: Attendee
+  checkin: Checkin
+  clientMutationId: String
+}
+
+input LinkAttendeeToContactInput {
+  attendeeId: String!
+  contactId: String!
+  clientMutationId: String
+}
+
+type LinkAttendeeToContactPayload {
+  calendarEvent: CalendarEvent
+  attendee: Attendee
+  contact: Contact
+  clientMutationId: String
+}
+
+# A dwelling to be brought or sold
+type Listing implements Node {
+  # The ID of an object
+  id: ID!
+  listingId: String
+  channel: String
+  account: Account
+
+  # A short description of the listing
+  description: String
+  createdAt: Date
+  modifiedAt: Date
+  archivedAt: Date
+  status: String
+  agents: [agent]
+  listingType: String
+  listingAgents: [listingAgent]
+  baths: String
+  beds: String
+  cars: String
+  imageUrl: String
+  imageUrls: [String]
+  title: String
+  references: [Reference]
+  integrations: [Integration]
+  availableIntegrations: [ExternalSystem]
+  addressComponents: [AddressComponent]
+
+  # This field can return an address string in any format requested by the client.
+  #
+  # Example:
+  # {{{streetNumber}}} {{streeName}} {{streetType}} will return a string in the format: '123 Fake St'
+  #
+  # The format argument will take any valid mustache template. Only the following values will be replaced:
+  #
+  # unitNo
+  #
+  # unitNumber
+  #
+  # unit_number
+  #
+  # subpremise
+  #
+  # streetNo
+  #
+  # streetNumber
+  #
+  # street_number
+  #
+  # street
+  #
+  # streetName
+  #
+  # street_address
+  #
+  # route
+  #
+  # streetType
+  #
+  # city
+  #
+  # suburb
+  #
+  # locality
+  #
+  # administrative_area_level_2
+  #
+  # state
+  #
+  # administrative_area_level_1
+  #
+  # zip
+  #
+  # postcode
+  #
+  # postal_code
+  #
+  # country
+  #
+  # countryName
+  #
+  # isoCountryCodeAlpha2
+  #
+  # countryCode
+  #
+  #
+  addressFormatted(
+    # String representing mustache template
+    format: String!
+  ): String
+  geometry: Geometry
+  addressFormattedFull: String
+  addressFormattedShort: String
+  attachments: [Attachment]
+  activities(after: String, first: Int, before: String, last: Int): ActivityConnection
+  domainCheckinEnabled: Boolean
+  domainUrl: String
+  checkins(after: String, first: Int, before: String, last: Int): CheckinConnection
+  contacts(after: String, first: Int, before: String, last: Int): ListingContactConnection @deprecated(reason: "use listingContacts")
+  listingContacts(after: String, first: Int, before: String, last: Int): ListingContactConnection
+  contactCount: Int
+  openForInspections: [OpenForInspection]
+  nextOfi: Date
+  filePickerUploadPath: String
+  visitorReportUrl: String
+  viewerIsFollowing: Boolean
+  brochureUrl: String
+  vendorReportUrl: String
+  rentalApplicationCount: Int
+
+  # a List of all opportunities created for this account
+  rentalApplicationOpportunities(after: String, first: Int, before: String, last: Int): OpportunityConnection
+  features: ListingFeatures
+
+  # lists of all users that have access to this listing for this account
+  usersWithAccess(after: String, first: Int, before: String, last: Int): UserConnection
+  auctionDate: Date
+
+  # Lists all vendors for the given listings
+  vendors(after: String, first: Int, before: String, last: Int): VendorConnection
+  flaggedCount: Int
+  checkinCount: Int
+  floorPlanImageUrls: [String]
+  videoUrl: String
+  liveView: LiveViewSettings
+  priceToShow: String
+  soldPrice: String
+  branding: ListingBranding
+
+  # Lists all calendar events for a listing. Includes all inspections.
+  calendarEvents(before: String, after: String, first: Int, last: Int, type: String, status: String, eventsAfterDate: Date): CalendarEventConnection
+  calendarEventSettings: CalendarEventSettingsForListing
+}
+
+type listingAgent {
+  name: String
+  email: String
+  imageUrl: String
+  phone: String
+}
+
+type ListingBranding {
+  primaryColor: String
+  accentColor: String
+  agencyLogoUrl: String
+}
+
+# A connection to a list of items.
+type ListingConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [ListingEdge]
+}
+
+type ListingContact implements Node {
+  # The ID of an object
+  id: ID!
+  contact: Contact
+  visits: Int
+  lastVisit: Date
+  noteCount: Int
+  flagged: Boolean
+  hasSentDocs: Boolean
+  checkins(after: String, first: Int, before: String, last: Int): CheckinConnection
+}
+
+# A connection to a list of items.
+type ListingContactConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [ListingContactEdge]
+}
+
+# An edge in a connection.
+type ListingContactEdge {
+  # The item at the end of the edge
+  node: ListingContact
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# An edge in a connection.
+type ListingEdge {
+  # The item at the end of the edge
+  node: Listing
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type ListingFeatures {
+  kiosk: Feature
+  sendWelcomeSMS: Feature
+  customBrochureBranding: Feature
+  rentalApplications: Feature
+  manageAccessForListing: Feature
+  setDomainCheckinEnabled: Feature
+  broadcastMessagingEnabled: Feature
+  liveViewEnabled: Feature
+  vendorManagement: Feature
+  liveViewActivities: Feature
+  autoNotifyVendors: Feature
+  homeLoanReferralsEnabled: Feature
+  bookingsEnabled: Feature
+  bookingsByOpenInspection: Feature
+  bookingByRequest: Feature
+}
+
+enum listingType {
+  LISTING_TYPE_SALE_ONLY
+  LISTING_TYPE_RENT_ONLY
+}
+
+type LiveViewSettings {
+  autoNotifyVendors: Boolean @deprecated(reason: "Please use listing feature edge")
+  previewUrl: String
+  showDocsSentActivities: Boolean
+  showNoteActivities: Boolean
+}
+
+# Living situation info
+type LivingSituation {
+  situation: String
+  moveInDate: Date
+  reasonForLeaving: String
+  contactName: String
+  contactCountryCode: String
+  contactPhone: String
+  contactEmail: String
+  monthlyRent: String
+  _editIndex: Int
+  _operation: String
+  formattedAddress: String
+  address: [AddressComponent]
+}
+
+type Location {
+  lat: Float
+  lng: Float
+}
+
+# Represents an phone number, whatever that looks like: https://en.wikipedia.org/wiki/E.164
+scalar Mobile
+
+# Represents mongo object id string.
+scalar MongoObjectId
+
+type Mutation {
+  updateViewer(input: UpdateViewerInput!): UpdateViewerPayload
+  autoJoinExistingAccounts(input: AutoJoinExistingAccountsInput!): AutoJoinExistingAccountsPayload
+  updateContact(input: UpdateContactInput!): UpdateContactPayload
+  addContact(input: AddContactInput!): AddContactPayload
+  addEmailToUserForAuth0Jwt(input: AddEmailToUserForAuth0JwtInput!): AddEmailToUserForAuth0JwtPayload
+  addMobileToUserForAuth0Jwt(input: AddMobileToUserForAuth0JwtInput!): AddMobileToUserForAuth0JwtPayload
+  unsubscribeBroadcast(input: unsubscribeBroadcastInput!): unsubscribeBroadcastPayload
+  createAccount(input: CreateAccountInput!): CreateAccountPayload
+  updateAccount(input: UpdateAccountInput!): UpdateAccountPayload
+  updateAccountMembership(input: UpdateAccountMembershipInput!): UpdateAccountMembershipPayload
+  removeAccountMembership(input: RemoveAccountMembershipInput!): RemoveAccountMembershipPayload
+  createAccountMembershipInvite(input: CreateAccountMembershipInviteInput!): CreateAccountMembershipInvitePayload
+  removeAccountMembershipInvite(input: RemoveAccountMembershipInviteInput!): RemoveAccountMembershipInvitePayload
+  acceptAccountMembershipInvite(input: AcceptAccountMembershipInviteInput!): AcceptAccountMembershipInvitePayload
+  requestAccountCrmIntegration(input: RequestAccountCrmIntegrationInput!): RequestAccountCrmIntegrationPayload
+  setupBillingForAccount(input: SetupBillingForAccountInput!): SetupBillingForAccountPayload
+  activatePlanForAccount(input: ActivatePlanForAccountInput!): ActivatePlanForAccountPayload
+  updateBillingEmailForAccount(input: UpdateBillingEmailForAccountInput!): UpdateBillingEmailForAccountPayload
+  addAttendee(input: AddAttendeeInput!): AddAttendeePayload
+  setAttendeeStatus(input: SetAttendeeStatusInput!): SetAttendeeStatusPayload
+  linkAttendeeToContact(input: LinkAttendeeToContactInput!): LinkAttendeeToContactPayload
+  linkAttendeeToCheckin(input: LinkAttendeeToCheckinInput!): LinkAttendeeToCheckinPayload
+  addCalendarEvent(input: AddCalendarEventInput!): AddCalendarEventPayload
+  requestCalendarEvent(input: RequestCalendarEventInput!): RequestCalendarEventPayload
+  updateCalendarEvent(input: UpdateCalendarEventInput!): UpdateCalendarEventPayload
+  addCheckin(input: AddCheckinInput!): AddCheckinPayload
+  removeCheckin(input: RemoveCheckinInput!): RemoveCheckinPayload
+  addListingAttachments(input: AddAttachmentsInput!): AddAttachmentsPayload
+  removeListingAttachment(input: RemoveAttachmentInput!): RemoveAttachmentPayload
+  archiveListing(input: ArchiveListingInput!): ArchiveListingPayload
+  unarchiveListing(input: UnarchiveListingInput!): UnarchiveListingPayload
+  addIntegrationRefToListing(input: AddIntegrationRefToListingInput!): AddIntegrationRefToListingPayload
+  editIntegrationRefForListing(input: EditIntegrationRefForListingInput!): EditIntegrationRefForListingPayload
+  deleteIntegrationRefForListing(input: DeleteIntegrationRefForListingInput!): DeleteIntegrationRefForListingPayload
+  editDomainCheckinEnabledForListing(input: EditDomainCheckinEnabledForListingInput!): EditDomainCheckinEnabledForListingPayload
+  followListing(input: FollowListingInput!): FollowListingPayload
+  unfollowListing(input: UnfollowListingInput!): UnfollowListingPayload
+  grantAccessForListing(input: GrantAccessForListingInput!): GrantAccessForListingPayload
+  revokeAccessForListing(input: RevokeAccessForListingInput!): RevokeAccessForListingPayload
+  setListingLiveViewShowNoteActivities(input: SetListingLiveViewShowNoteActivitiesInput!): SetListingLiveViewShowNoteActivitiesPayload
+  setListingLiveViewShowDocsSentActivities(input: SetListingLiveViewShowDocsSentActivitiesInput!): SetListingLiveViewShowDocsSentActivitiesPayload
+  setListingCalendarEventSettings(input: SetListingCalendarEventSettingsInput!): SetListingCalendarEventSettingsPayload
+  updateListingContact(input: UpdateListingContactInput!): UpdateListingContactPayload
+  createHomeConnectionOpportunity(input: CreateHomeConnectionOpportunityInput!): CreateHomeConnectionOpportunityPayload
+  createRentalApplicationOpportunity(input: CreateRentalApplicationOpportunityInput!): CreateRentalApplicationOpportunityPayload
+  approveRentalApplication(input: ApproveRentalApplicationInput!): ApproveRentalApplicationPayload
+  rejectRentalApplication(input: RejectRentalApplicationInput!): RejectRentalApplicationPayload
+  setArchivedHomeConnectionOpportunity(input: SetArchivedHomeConnectionOpportunityInput!): SetArchivedHomeConnectionOpportunityPayload
+  addVendor(input: AddVendorInput!): AddVendorPayload
+  removeVendor(input: RemoveVendorInput!): RemoveVendorPayload
+  sendLoanReferral(input: SendLoanReferralInput!): SendLoanReferralPayload
+  addNote(input: AddNoteInput!): AddNotePayload
+  updateNote(input: updateNoteInput!): updateNotePayload
+  deleteNote(input: DeleteNoteInput!): DeleteNotePayload
+}
+
+# An object with an ID
+interface Node {
+  # The id of the object.
+  id: ID!
+}
+
+type Note implements Node {
+  # The ID of an object
+  id: ID!
+  noteId: String
+  text: String
+  listing: Listing
+  isVendorComment: Boolean
+  shared: Boolean
+  author: User
+  modified: Date
+  viewerCanEdit: Boolean
+}
+
+# A connection to a list of items.
+type NoteConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [NoteEdge]
+}
+
+# An edge in a connection.
+type NoteEdge {
+  # The item at the end of the edge
+  node: Note
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type NotificationEmailPreference {
+  enabled: Boolean
+  unreadMessages: Boolean
+  weeklySummary: Boolean
+  announcements: Boolean
+}
+
+input NotificationEmailPreferenceInput {
+  enabled: Boolean
+  unreadMessages: Boolean
+  weeklySummary: Boolean
+  announcements: Boolean
+}
+
+type NotificationPreference {
+  push: NotificationPushPreference
+  email: NotificationEmailPreference
+}
+
+input NotificationPreferenceInput {
+  push: NotificationPushPreferenceInput
+  email: NotificationEmailPreferenceInput
+}
+
+type NotificationPushPreference {
+  enabled: Boolean
+  messages: Boolean
+  checkins: Boolean
+  ofis: Boolean
+}
+
+input NotificationPushPreferenceInput {
+  enabled: Boolean
+  messages: Boolean
+  checkins: Boolean
+  ofis: Boolean
+}
+
+# Personal details of additional occupants
+type OccupantPerson {
+  firstName: String
+  lastName: String
+  onLease: Boolean
+  relationship: String
+  age: Int
+  email: String
+  countryCode: String
+  phone: String
+  _editIndex: Int
+  _operation: String
+}
+
+# Pet details
+type OccupantPet {
+  petType: String
+  registrationNumber: String
+  _editIndex: Int
+  _operation: String
+}
+
+# Vehicle details
+type OccupantVehicle {
+  makeAndModel: String
+  registrationNumber: String
+  _editIndex: Int
+  _operation: String
+}
+
+# A real estate office
+type Office {
+  # The ID of an object
+  id: ID!
+  officeId: String
+
+  # Name of the office
+  name: String
+
+  # office ingest feed
+  ingestFeeds: [IngestFeed]
+}
+
+type OpenForInspection {
+  startDate: Date
+  endDate: Date
+}
+
+# Provides information about the status of a given opportunity
+interface Opportunity {
+  # The ID of an object
+  id: ID!
+  opportunityId: String
+  type: String
+  createdAt: String
+  createdBy: User
+  status: String
+}
+
+# A connection to a list of items.
+type OpportunityConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [OpportunityEdge]
+}
+
+# An edge in a connection.
+type OpportunityEdge {
+  # The item at the end of the edge
+  node: Opportunity
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# Information about pagination in a connection.
+type PageInfo {
+  # When paginating forwards, are there more items?
+  hasNextPage: Boolean!
+
+  # When paginating backwards, are there more items?
+  hasPreviousPage: Boolean!
+
+  # When paginating backwards, the cursor to continue.
+  startCursor: String
+
+  # When paginating forwards, the cursor to continue.
+  endCursor: String
+}
+
+# Personal details on the profile
+type PersonalDetails {
+  title: String
+  firstName: String
+  lastName: String
+  birthday: Date
+  gender: String
+  email: String
+  countryCode: String
+  phone: String
+  smoker: Boolean
+  emergencyContact: EmergencyContact
+}
+
+# Represents an phone number, with weaker requirements than the e.164 standard
+scalar Phone
+
+type Place implements Node {
+  # The ID of an object
+  id: ID!
+  fullAddress: String
+  firstLine: String
+  secondLine: String
+  addressComponents: [AddressComponent]
+}
+
+# A connection to a list of items.
+type PlaceConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [PlaceEdge]
+}
+
+# An edge in a connection.
+type PlaceEdge {
+  # The item at the end of the edge
+  node: Place
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type Query {
+  # Gets the current viewer record
+  viewer: Viewer
+  relay: Query
+  applicationConfig: ApplicationConfig
+  listing(sourceId: String!, source: String, officeId: String): Listing
+  placeSearch(before: String, after: String, first: Int, last: Int, query: String): PlaceConnection
+
+  # Fetches an object given its ID
+  node(
+    # The ID of an object
+    id: ID!
+  ): Node
+}
+
+type Reference {
+  id: String
+  source: String
+}
+
+input RejectRentalApplicationInput {
+  opportunityId: String!
+  notifyApplicants: Boolean
+  clientMutationId: String
+}
+
+type RejectRentalApplicationPayload {
+  opportunity: RentalApplicationOpportunity
+  clientMutationId: String
+}
+
+input RemoveAccountMembershipInput {
+  accountMembershipId: String
+  clientMutationId: String
+}
+
+input RemoveAccountMembershipInviteInput {
+  accountMembershipInviteId: String!
+  clientMutationId: String
+}
+
+type RemoveAccountMembershipInvitePayload {
+  # The ID of an object
+  deletedAccountMembershipInviteNodeId: ID!
+  account: Account
+  clientMutationId: String
+}
+
+type RemoveAccountMembershipPayload {
+  # The ID of an object
+  deletedMembershipNodeId: ID!
+  account: Account
+  viewer: Viewer
+  clientMutationId: String
+}
+
+input RemoveAttachmentInput {
+  listingId: String!
+  attachmentId: String!
+  clientMutationId: String
+}
+
+type RemoveAttachmentPayload {
+  listing: Listing
+  clientMutationId: String
+}
+
+input RemoveCheckinInput {
+  checkinId: String
+  ref: String
+  refSource: String
+  clientMutationId: String
+}
+
+type RemoveCheckinPayload {
+  checkin: Checkin
+  listing: Listing
+  listingContact: ListingContact
+  clientMutationId: String
+}
+
+input RemoveVendorInput {
+  vendorId: String
+  clientMutationId: String
+}
+
+type RemoveVendorPayload {
+  listing: Listing
+
+  # The ID of an object
+  deletedVendorNodeId: ID!
+  clientMutationId: String
+}
+
+# Rental application information
+type RentalApplicationAgent implements Node {
+  # The ID of an object
+  id: ID!
+  applicationId: String
+  listingId: String
+  status: String
+  consumerProfiles: [ConsumerProfileDetails]
+  applicationDetails: ApplicationDetails
+  otherOccupants: [OccupantPerson]
+  vehicles: [OccupantVehicle]
+  pets: [OccupantPet]
+  timezone: String
+}
+
+type RentalApplicationOpportunity implements Node, Opportunity {
+  # The ID of an object
+  id: ID!
+  opportunityId: String
+  type: String
+  createdAt: String
+  createdBy: User
+  name: String
+  status: String
+  email: String
+  application: RentalApplicationAgent
+  activities(after: String, first: Int, before: String, last: Int): ActivityConnection
+}
+
+input RequestAccountCrmIntegrationInput {
+  accountId: String!
+  accountCrmIntegrationId: String!
+  clientMutationId: String
+}
+
+type RequestAccountCrmIntegrationPayload {
+  crmIntegrationsEdge: AccountCrmIntegrationEdge
+  account: Account
+  clientMutationId: String
+}
+
+input RequestCalendarEventInput {
+  listingId: MongoObjectId!
+  startDate: Date!
+  attendee: AttendeeInputType
+  clientMutationId: String
+}
+
+type RequestCalendarEventPayload {
+  listing: Listing
+  calendarEventEdge: CalendarEventEdge
+  calendarEvent: CalendarEvent
+  attendeeEdge: AttendeeEdge
+  attendee: Attendee
+  token: String
+  clientMutationId: String
+}
+
+input RevokeAccessForListingInput {
+  userId: String!
+  listingId: String!
+  clientMutationId: String
+}
+
+type RevokeAccessForListingPayload {
+  listing: Listing
+
+  # The ID of an object
+  revokedUserNodeId: ID!
+  clientMutationId: String
+}
+
+enum Role {
+  admin
+  user
+}
+
+input SendLoanReferralInput {
+  phoneNumber: String
+  name: String
+  listingId: String
+  clientMutationId: String
+}
+
+type SendLoanReferralPayload {
+  success: Boolean
+  clientMutationId: String
+}
+
+input SetArchivedHomeConnectionOpportunityInput {
+  opportunityId: String!
+  archived: Boolean!
+  clientMutationId: String
+}
+
+type SetArchivedHomeConnectionOpportunityPayload {
+  opportunity: HomeConnectionOpportunity
+  clientMutationId: String
+}
+
+input SetAttendeeStatusInput {
+  attendeeId: String!
+  status: attendeeStatus!
+  clientMutationId: String
+}
+
+type SetAttendeeStatusPayload {
+  calendarEvent: CalendarEvent
+  attendeeEdge: AttendeeEdge
+  attendee: Attendee
+  clientMutationId: String
+}
+
+input SetListingCalendarEventSettingsInput {
+  listingId: MongoObjectId!
+  duration: DurationInput
+  allowedCalendarEventRequest: allowedCalendarEventRequestType
+  clientMutationId: String
+}
+
+type SetListingCalendarEventSettingsPayload {
+  listing: Listing
+  clientMutationId: String
+}
+
+input SetListingLiveViewShowDocsSentActivitiesInput {
+  listingId: String!
+  enabled: Boolean
+  clientMutationId: String
+}
+
+type SetListingLiveViewShowDocsSentActivitiesPayload {
+  listing: Listing
+  clientMutationId: String
+}
+
+input SetListingLiveViewShowNoteActivitiesInput {
+  listingId: String!
+  enabled: Boolean
+  clientMutationId: String
+}
+
+type SetListingLiveViewShowNoteActivitiesPayload {
+  listing: Listing
+  clientMutationId: String
+}
+
+input SetupBillingForAccountInput {
+  accountId: String!
+  clientMutationId: String
+}
+
+type SetupBillingForAccountPayload {
+  account: Account
+  clientMutationId: String
+}
+
+type SmoochConfig {
+  userId: String
+  authToken: String
+}
+
+input UnarchiveListingInput {
+  listingId: String!
+  clientMutationId: String
+}
+
+type UnarchiveListingPayload {
+  listing: Listing
+  account: Account
+  clientMutationId: String
+}
+
+input UnfollowListingInput {
+  listingId: String!
+  clientMutationId: String
+}
+
+type UnfollowListingPayload {
+  listing: Listing
+  account: Account
+
+  # The ID of an object
+  unfollowedListingNodeId: ID!
+  clientMutationId: String
+}
+
+type UniversalLinkInfo {
+  navigateTo: String
+  account: Account
+  isAccountMember: Boolean
+  entityReferences: [EntityReference]
+}
+
+input unsubscribeBroadcastInput {
+  contactId: String!
+  unsubscribeBroadcast: Boolean!
+  clientMutationId: String
+}
+
+type unsubscribeBroadcastPayload {
+  contact: Contact
+  clientMutationId: String
+}
+
+input UpdateAccountInput {
+  accountId: String!
+  name: String
+  phone: String
+  imageUrl: String
+  streetNumber: String
+  streetName: String
+  locality: String
+  state: String
+  postcode: String
+  countryName: String
+  isoCountryCodeAlpha2: String
+  latitude: Float
+  longitude: Float
+  enableWelcomeSms: Boolean
+  smsFrom: String
+  primaryColor: String
+  accentColor: String
+  allowAutoJoin: Boolean
+  privateListings: Boolean
+  clientMutationId: String
+}
+
+input UpdateAccountMembershipInput {
+  accountMembershipId: String
+  role: Role
+  clientMutationId: String
+}
+
+type UpdateAccountMembershipPayload {
+  membership: AccountMembership
+  clientMutationId: String
+}
+
+type UpdateAccountPayload {
+  account: Account
+  clientMutationId: String
+}
+
+input UpdateBillingEmailForAccountInput {
+  accountId: String!
+  email: Email!
+  clientMutationId: String
+}
+
+type UpdateBillingEmailForAccountPayload {
+  account: Account
+  clientMutationId: String
+}
+
+input UpdateCalendarEventInput {
+  calendarEventId: MongoObjectId!
+  status: calendarEventStatus
+  visibility: calendarEventVisibility
+  clientMutationId: String
+}
+
+type UpdateCalendarEventPayload {
+  calendarEvent: CalendarEvent
+  clientMutationId: String
+}
+
+input UpdateContactInput {
+  contactId: String!
+  accountId: String!
+  fullName: String
+  mobile: Mobile
+  landline: Phone
+  email: Email
+  address: [AddressComponentInputAgent]
+  clientMutationId: String
+}
+
+type UpdateContactPayload {
+  contact: Contact
+  clientMutationId: String
+}
+
+input UpdateListingContactInput {
+  id: String!
+  flagged: Boolean
+  clientMutationId: String
+}
+
+type UpdateListingContactPayload {
+  listingContact: ListingContact
+  listing: Listing
+  clientMutationId: String
+}
+
+input updateNoteInput {
+  noteId: String!
+  text: String
+  shared: Boolean
+  isVendorComment: Boolean
+  clientMutationId: String
+}
+
+type updateNotePayload {
+  note: Note
+  clientMutationId: String
+}
+
+input UpdateViewerInput {
+  firstName: String
+  lastName: String
+  imageUrl: String
+  timezone: String
+  preferences: UserPreferencesInput
+  clientMutationId: String
+}
+
+type UpdateViewerPayload {
+  viewer: Viewer
+  clientMutationId: String
+}
+
+type User implements Node {
+  # The ID of an object
+  id: ID!
+  userId: String
+  layerId: String
+  name: String
+  firstName: String
+  lastName: String
+  email: String
+  emailVerified: Boolean
+  mobile: String
+  mobileVerified: Boolean
+  imageUrl: String
+  lastLoginAt: Date
+}
+
+# A connection to a list of items.
+type UserConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [UserEdge]
+}
+
+# An edge in a connection.
+type UserEdge {
+  # The item at the end of the edge
+  node: User
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type UserPreferences {
+  defaultAccount: Account
+  virtualAssistant: VirtualAssistantPreference
+  notifications: NotificationPreference
+}
+
+input UserPreferencesInput {
+  defaultAccountId: String
+  virtualAssistant: VirtualAssistantPreferenceInput
+  notifications: NotificationPreferenceInput
+}
+
+# A vendor for a property
+type Vendor implements Node {
+  # The ID of an object
+  id: ID!
+  vendorId: String
+  contact: Contact
+  listing: Listing
+  status: String
+  createdAt: Date
+  modifiedAt: Date
+}
+
+# A connection to a list of items.
+type VendorConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [VendorEdge]
+}
+
+# An edge in a connection.
+type VendorEdge {
+  # The item at the end of the edge
+  node: Vendor
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# Information about the current user
+type Viewer implements Node {
+  # The ID of an object
+  id: ID!
+  userId: String
+  channel: String
+  analyticsId: String
+  name: String
+  firstName: String
+  lastName: String
+  email: String
+  emailVerified: Boolean
+  mobile: String
+  mobileVerified: Boolean
+  imageUrl: String
+  lastLoginAt: Date
+  identityProviders: [IdentityProvider]
+  smoochConfig: SmoochConfig
+
+  # List of accounts for this viewer
+  accounts(after: String, first: Int, before: String, last: Int): AccountConnection
+
+  # List of suggested account to create or join for this user
+  suggestedAccounts(after: String, first: Int, before: String, last: Int): AccountConnection
+  features: ViewerFeatures
+
+  # General account search
+  searchAccounts(before: String, after: String, first: Int, last: Int, name: String): AccountConnection
+
+  # Gets viewers requests to join an account
+  joinAccountRequests(after: String, first: Int, before: String, last: Int): JoinAccountRequestConnection
+  timezone: String
+  preferences: UserPreferences
+  filePickerUploadPathForAvatar: String
+  applicationConfig: ApplicationConfig
+  isEmailAvailable(email: String!): EmailAvailable
+
+  # Resolves a universal shallow link to an entity given with related references
+  universalLinkInfo(payload: Json): UniversalLinkInfo
+}
+
+type ViewerFeatures {
+  phoneAndContactIntegration: Feature
+}
+
+type VirtualAssistantPreference {
+  enabled: Boolean
+  dailySummary: Boolean
+  weeklySummary: Boolean
+  OFIsReminders: Boolean
+  inspectionWrapUp: Boolean
+}
+
+input VirtualAssistantPreferenceInput {
+  enabled: Boolean
+  dailySummary: Boolean
+  weeklySummary: Boolean
+  OFIsReminders: Boolean
+  inspectionWrapUp: Boolean
+}

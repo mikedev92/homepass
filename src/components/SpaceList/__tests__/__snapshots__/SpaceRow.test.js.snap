@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpaceRow /> matches snapshot 1`] = `
+<Styled(ListItem)
+  onPress={[Function]}
+  thumbnail={true}
+>
+  <Styled(Left)>
+    <Styled(Thumbnail)
+      source={
+        Object {
+          "uri": "http://myImage.png",
+        }
+      }
+      square={true}
+      style={
+        Object {
+          "borderRadius": 5,
+        }
+      }
+    />
+  </Styled(Left)>
+  <Styled(Body)>
+    <Styled(Text)>
+      3 Derry St
+      
+      
+      <Styled(Text)
+        note={true}
+      >
+        Aberfeldie 3040
+      </Styled(Text)>
+      
+      
+      <Styled(Text)
+        note={true}
+      >
+        Open
+         
+        in a year
+      </Styled(Text)>
+    </Styled(Text)>
+    <RowNB>
+      <Styled(ViewNB)
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </RowNB>
+  </Styled(Body)>
+</Styled(ListItem)>
+`;

@@ -1,0 +1,31 @@
+dependencies: \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/TouchID/Private/A0TouchIDRegisterViewController.m \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Target\ Support\ Files/Lock/Lock-prefix.pch \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/TouchID/Private/A0TouchIDRegisterViewController.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/A0ContainerViewController.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/A0KeyboardEnabledView.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/CoreUI/A0Theme.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/CoreUI/A0ServiceTheme.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/Private/A0CredentialFieldView.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Utils/A0ProgressButton.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Utils/A0KeyboardHandler.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/TouchID/Private/A0TouchIDSignUpViewController.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/Private/A0AuthenticationUIComponent.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/Private/A0DatabaseLoginViewController.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/A0ConnectionDomainMatcher.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/Private/A0MFACodeViewController.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/Private/A0ChangePasswordViewController.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/CoreUI/A0FieldValidator.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/A0AuthParameters.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/Private/A0NavigationView.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/Private/A0TitleView.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/Private/Constants.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/Private/A0Logging.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/Private/A0Logger.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/TouchID/A0KeyUploader.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/A0Lock.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/A0APIClientProvider.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/A0AuthenticatorProvider.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/A0Token.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/Core/A0UserProfile.h \
+  /Volumes/Data-2/tasks/homepass-nxt-develop/ios/Pods/Lock/Lock/UI/A0LoginView.h

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Profile /> matches snapshots 1`] = `
+<Styled(Container)>
+  <Styled(Header)>
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+  </Styled(Header)>
+  <Styled(Content)
+    style={
+      Object {
+        "backgroundColor": "white",
+      }
+    }
+  >
+    <Styled(Text)>
+      Profile
+    </Styled(Text)>
+    <Styled(Button)>
+      <Styled(Text)>
+        Logout
+      </Styled(Text)>
+    </Styled(Button)>
+    <Styled(Button)
+      onPress={[Function]}
+    >
+      <Styled(Text)>
+        Style Guide
+      </Styled(Text)>
+    </Styled(Button)>
+  </Styled(Content)>
+</Styled(Container)>
+`;

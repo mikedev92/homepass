@@ -1,0 +1,50 @@
+machine:
+  timezone: Australia/Melbourne
+  ruby:
+    version: 2.3.1
+  node:
+    version: 7.10.0
+dependencies:
+  pre:
+    - |
+      if [ "$(gem list bundler -i)" == false ]; then
+        echo "Download and Install Ruby Bundler";
+        echo "export rvm_ignore_gemsets_flag=1" >> ~/.rvmrc;
+        gem install bundler;
+      else
+        echo "The Correct version of Ruby Bundler is already installed";
+      fi
+    - |
+      echo "Install code-push-cli and login"
+      yarn global add code-push-cli
+      code-push login --accessKey $CODE_PUSH_ACCESS_KEY
+
+  cache_directories:
+    - vendor/bundle
+    - ~/.cache/yarn
+  override:
+    - yarn
+    - bundle check || bundle install
+
+test:
+  pre:
+    - yarn run lint
+    - yarn run flow-check
+  override:
+    - yarn test-coverage
+    - yarn report-coverage
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./scripts/deploy.sh production
+  staging:
+    branch: release/*
+    commands:
+      - ./scripts/deploy.sh staging
+  development:
+    branch: develop
+    commands:
+      - ./scripts/deploy.sh development
+

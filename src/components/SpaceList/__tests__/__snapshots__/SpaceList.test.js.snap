@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpaceList /> renders a segmented list of properties 1`] = `
+<Styled(Container)>
+  <Styled(Header)>
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body) />
+    <Styled(Right)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="options"
+        />
+      </Styled(Button)>
+    </Styled(Right)>
+  </Styled(Header)>
+  <Search
+    backgroundColor="transparent"
+    blurOnSubmit={false}
+    editable={true}
+    keyboardShouldPersist={false}
+    onChangeText={[Function]}
+    placeholderCollapsedMargin={15}
+    placeholderExpandedMargin={20}
+    searchIconCollapsedMargin={25}
+    searchIconExpandedMargin={10}
+    shadowColor="#000"
+    shadowOffsetHeightCollapsed={2}
+    shadowOffsetHeightExpanded={4}
+    shadowOffsetWidth={0}
+    shadowOpacityCollapsed={0.12}
+    shadowOpacityExpanded={0.24}
+    shadowRadius={4}
+    shadowVisible={false}
+    titleCancelColor="black"
+  />
+  <SectionList
+    data={Array []}
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onEndReached={[Function]}
+    onEndReachedThreshold={2}
+    refreshing={false}
+    removeClippedSubviews={true}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    renderSectionHeader={[Function]}
+    sections={
+      Array [
+        Object {
+          "data": Array [],
+          "key": "my places",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "node": Object {
+                "isViewerMember": true,
+                "title": "a",
+              },
+            },
+            Object {
+              "node": Object {
+                "isViewerMember": false,
+                "title": "b",
+              },
+            },
+          ],
+          "key": "other places",
+        },
+      ]
+    }
+    stickySectionHeadersEnabled={true}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+</Styled(Container)>
+`;

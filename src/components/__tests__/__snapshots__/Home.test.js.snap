@@ -1,0 +1,1273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> matches snapshots 1`] = `
+<Styled(Container)>
+  <Styled(Content)
+    statusBarPadding={true}
+  >
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <ColumnNB>
+        <Styled(ViewNB)>
+          <Styled(Text)
+            status={true}
+          >
+            SATURDAY 01 JANUARY
+          </Styled(Text)>
+          <Styled(Text)
+            display={true}
+          >
+            Hi, 
+            First Name
+            !
+          </Styled(Text)>
+        </Styled(ViewNB)>
+      </ColumnNB>
+      <Styled(Right)
+        style={
+          Object {
+            "alignSelf": "flex-end",
+            "paddingBottom": 8,
+          }
+        }
+      >
+        <TouchableOpacity
+          activeOpacity={0.2}
+          focusedOpacity={0.7}
+          onPress={[Function]}
+          transparent={true}
+        >
+          <Styled(Thumbnail)
+            source={
+              Object {
+                "uri": "somePictureUrl",
+              }
+            }
+          />
+        </TouchableOpacity>
+      </Styled(Right)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <Styled(Text)
+        accent={true}
+      >
+        You're selling no homes today, relax enjoy the sun ☀️
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      itemDivider={true}
+    >
+      <Styled(Body)>
+        <Styled(Text)>
+          Activity
+        </Styled(Text)>
+      </Styled(Body)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <Styled(Feed)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+      </Styled(Feed)>
+    </Styled(ListItem)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<Home /> matches snapshots 2`] = `
+<Styled(Container)>
+  <Styled(Content)
+    statusBarPadding={true}
+  >
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <ColumnNB>
+        <Styled(ViewNB)>
+          <Styled(Text)
+            status={true}
+          >
+            SATURDAY 01 JANUARY
+          </Styled(Text)>
+          <Styled(Text)
+            display={true}
+          >
+            Hey there
+          </Styled(Text)>
+        </Styled(ViewNB)>
+      </ColumnNB>
+      <Styled(Right)
+        style={
+          Object {
+            "alignSelf": "flex-end",
+            "paddingBottom": 8,
+          }
+        }
+      >
+        <TouchableOpacity
+          activeOpacity={0.2}
+          focusedOpacity={0.7}
+          onPress={[Function]}
+          transparent={true}
+        >
+          <Styled(Badge)>
+            <Styled(Text)>
+              Profile
+            </Styled(Text)>
+          </Styled(Badge)>
+        </TouchableOpacity>
+      </Styled(Right)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <Styled(Text)
+        accent={true}
+      >
+        You're selling 1 home. It's a beautiful day ☀️
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      itemDivider={true}
+    >
+      <Styled(Body)>
+        <Styled(Text)>
+          Places
+        </Styled(Text)>
+      </Styled(Body)>
+      <Styled(Right)>
+        <Styled(Button)
+          noPadding={true}
+          onPress={[Function]}
+          transparent={true}
+        >
+          <Styled(Text)>
+            See all
+          </Styled(Text)>
+        </Styled(Button)>
+      </Styled(Right)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      noBorder={true}
+      style={
+        Object {
+          "marginLeft": 0,
+          "paddingRight": 0,
+        }
+      }
+    >
+      <HomepassCarousel>
+        <TouchableOpacity
+          activeOpacity={1}
+          focusedOpacity={0.7}
+          onPress={[Function]}
+          style={
+            Object {
+              "paddingHorizontal": 5,
+              "width": 730,
+            }
+          }
+        >
+          <Styled(CardItem)
+            cardBody={true}
+          >
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 4,
+                  "height": 170,
+                  "width": "100%",
+                }
+              }
+            />
+          </Styled(CardItem)>
+          <Styled(CardItem)
+            cardBody={true}
+            onPress={[Function]}
+          >
+            <ColumnNB>
+              <Styled(Text)
+                body={true}
+                style={
+                  Object {
+                    "marginTop": 4,
+                  }
+                }
+              >
+                Property
+              </Styled(Text)>
+              <Styled(Text)
+                alert={true}
+                rt={true}
+                status={true}
+                style={
+                  Object {
+                    "marginTop": 0,
+                  }
+                }
+              >
+                WOO 30 YEARS AGO
+              </Styled(Text)>
+            </ColumnNB>
+          </Styled(CardItem)>
+        </TouchableOpacity>
+      </HomepassCarousel>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      itemDivider={true}
+    >
+      <Styled(Body)>
+        <Styled(Text)>
+          Activity
+        </Styled(Text)>
+      </Styled(Body)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <Styled(Feed)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+      </Styled(Feed)>
+    </Styled(ListItem)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<Home /> matches snapshots 3`] = `
+<Styled(Container)>
+  <Styled(Content)
+    statusBarPadding={true}
+  >
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <ColumnNB>
+        <Styled(ViewNB)>
+          <Styled(Text)
+            status={true}
+          >
+            SATURDAY 01 JANUARY
+          </Styled(Text)>
+          <Styled(Text)
+            display={true}
+          >
+            Hi, 
+            First Name
+            !
+          </Styled(Text)>
+        </Styled(ViewNB)>
+      </ColumnNB>
+      <Styled(Right)
+        style={
+          Object {
+            "alignSelf": "flex-end",
+            "paddingBottom": 8,
+          }
+        }
+      >
+        <TouchableOpacity
+          activeOpacity={0.2}
+          focusedOpacity={0.7}
+          onPress={[Function]}
+          transparent={true}
+        >
+          <Styled(Thumbnail)
+            source={
+              Object {
+                "uri": "somePictureUrl",
+              }
+            }
+          />
+        </TouchableOpacity>
+      </Styled(Right)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <Styled(Text)
+        accent={true}
+      >
+        You're selling 2 homes. It's a beautiful day ☀️
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      itemDivider={true}
+    >
+      <Styled(Body)>
+        <Styled(Text)>
+          Places
+        </Styled(Text)>
+      </Styled(Body)>
+      <Styled(Right)>
+        <Styled(Button)
+          noPadding={true}
+          onPress={[Function]}
+          transparent={true}
+        >
+          <Styled(Text)>
+            See all
+          </Styled(Text)>
+        </Styled(Button)>
+      </Styled(Right)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      noBorder={true}
+      style={
+        Object {
+          "marginLeft": 0,
+          "paddingRight": 0,
+        }
+      }
+    >
+      <HomepassCarousel>
+        <TouchableOpacity
+          activeOpacity={1}
+          focusedOpacity={0.7}
+          onPress={[Function]}
+          style={
+            Object {
+              "paddingHorizontal": 5,
+              "width": 730,
+            }
+          }
+        >
+          <Styled(CardItem)
+            cardBody={true}
+          >
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 4,
+                  "height": 170,
+                  "width": "100%",
+                }
+              }
+            />
+          </Styled(CardItem)>
+          <Styled(CardItem)
+            cardBody={true}
+            onPress={[Function]}
+          >
+            <ColumnNB>
+              <Styled(Text)
+                body={true}
+                style={
+                  Object {
+                    "marginTop": 4,
+                  }
+                }
+              >
+                Property 1
+              </Styled(Text)>
+              <Styled(Text)
+                alert={true}
+                rt={true}
+                status={true}
+                style={
+                  Object {
+                    "marginTop": 0,
+                  }
+                }
+              >
+                WOO 30 YEARS AGO
+              </Styled(Text)>
+            </ColumnNB>
+          </Styled(CardItem)>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={1}
+          focusedOpacity={0.7}
+          onPress={[Function]}
+          style={
+            Object {
+              "paddingHorizontal": 5,
+              "width": 730,
+            }
+          }
+        >
+          <Styled(CardItem)
+            cardBody={true}
+          >
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 4,
+                  "height": 170,
+                  "width": "100%",
+                }
+              }
+            />
+          </Styled(CardItem)>
+          <Styled(CardItem)
+            cardBody={true}
+            onPress={[Function]}
+          >
+            <ColumnNB>
+              <Styled(Text)
+                body={true}
+                style={
+                  Object {
+                    "marginTop": 4,
+                  }
+                }
+              >
+                Property 2
+              </Styled(Text)>
+              <Styled(Text)
+                alert={true}
+                rt={true}
+                status={true}
+                style={
+                  Object {
+                    "marginTop": 0,
+                  }
+                }
+              >
+                WOO 30 YEARS AGO
+              </Styled(Text)>
+            </ColumnNB>
+          </Styled(CardItem)>
+        </TouchableOpacity>
+      </HomepassCarousel>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      itemDivider={true}
+    >
+      <Styled(Body)>
+        <Styled(Text)>
+          Activity
+        </Styled(Text)>
+      </Styled(Body)>
+    </Styled(ListItem)>
+    <Styled(ListItem)
+      noBorder={true}
+    >
+      <Styled(Feed)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+            <Styled(Text)>
+              Some extra content
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
+          <Styled(Left)>
+            <Styled(Icon)
+              name="arrow-back"
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Note added to christina for 27 Elizabeth St
+            </Styled(Text)>
+            <Styled(Text)
+              status={true}
+            >
+              Today at 9:41AM
+            </Styled(Text)>
+          </Styled(Body)>
+          <Styled(Right)>
+            <Styled(Thumbnail)
+              source={
+                Object {
+                  "uri": "https://unsplash.it/200/300",
+                }
+              }
+            />
+          </Styled(Right)>
+        </Styled(ListItem)>
+      </Styled(Feed)>
+    </Styled(ListItem)>
+  </Styled(Content)>
+</Styled(Container)>
+`;

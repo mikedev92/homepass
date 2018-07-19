@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpaceVisibility /> matches snapshots 1`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body)>
+      <Styled(Title)>
+        Visibility
+      </Styled(Title)>
+    </Styled(Body)>
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)>
+    <Styled(Separator)
+      bordered={true}
+      noTopBorder={true}
+    />
+    <Styled(List)>
+      <Styled(ListItem)>
+        <Styled(Text)>
+          Open
+          
+          
+          <Styled(Text)
+            caption={true}
+          >
+            Non members can join.
+          </Styled(Text)>
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={true}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)>
+        <Styled(Text)>
+          Private
+          
+          
+          <Styled(Text)
+            caption={true}
+          >
+            Non members must request to join.
+          </Styled(Text)>
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={false}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)
+        last={true}
+      >
+        <Styled(Text)>
+          Secret
+          
+          
+          <Styled(Text)
+            caption={true}
+          >
+            Only members can find and must be manually added.
+          </Styled(Text)>
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={false}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+    </Styled(List)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<SpaceVisibility /> matches snapshots 2`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body)>
+      <Styled(Title)>
+        Visibility
+      </Styled(Title)>
+    </Styled(Body)>
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)>
+    <Styled(Separator)
+      bordered={true}
+      noTopBorder={true}
+    />
+    <Styled(List)>
+      <Styled(ListItem)>
+        <Styled(Text)>
+          Open
+          
+          
+          <Styled(Text)
+            caption={true}
+          >
+            Non members can join.
+          </Styled(Text)>
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={false}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)>
+        <Styled(Text)>
+          Private
+          
+          
+          <Styled(Text)
+            caption={true}
+          >
+            Non members must request to join.
+          </Styled(Text)>
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={true}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)
+        last={true}
+      >
+        <Styled(Text)>
+          Secret
+          
+          
+          <Styled(Text)
+            caption={true}
+          >
+            Only members can find and must be manually added.
+          </Styled(Text)>
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={false}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+    </Styled(List)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<SpaceVisibility /> matches snapshots 3`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body)>
+      <Styled(Title)>
+        Visibility
+      </Styled(Title)>
+    </Styled(Body)>
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)>
+    <Styled(Separator)
+      bordered={true}
+      noTopBorder={true}
+    />
+    <Styled(List)>
+      <Styled(ListItem)>
+        <Styled(Text)>
+          Open
+          
+          
+          <Styled(Text)
+            caption={true}
+          >
+            Non members can join.
+          </Styled(Text)>
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={false}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)>
+        <Styled(Text)>
+          Private
+          
+          
+          <Styled(Text)
+            caption={true}
+          >
+            Non members must request to join.
+          </Styled(Text)>
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={false}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)
+        last={true}
+      >
+        <Styled(Text)>
+          Secret
+          
+          
+          <Styled(Text)
+            caption={true}
+          >
+            Only members can find and must be manually added.
+          </Styled(Text)>
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={true}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+    </Styled(List)>
+  </Styled(Content)>
+</Styled(Container)>
+`;

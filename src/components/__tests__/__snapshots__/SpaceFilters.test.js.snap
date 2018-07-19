@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpaceFilters /> matches snapshots 1`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body) />
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)>
+    <Styled(ListItem)
+      itemHeader={true}
+    >
+      <Styled(Text)>
+        SHOW
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(List)>
+      <Styled(ListItem)
+        last={true}
+        onPress={[Function]}
+      >
+        <Styled(Text)>
+          woo
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={true}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+    </Styled(List)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<SpaceFilters /> matches snapshots 2`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body) />
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)>
+    <Styled(ListItem)
+      itemHeader={true}
+    >
+      <Styled(Text)>
+        SHOW
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(List)>
+      <Styled(ListItem)
+        last={false}
+        onPress={[Function]}
+      >
+        <Styled(Text)>
+          woo
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio) />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)
+        last={false}
+        onPress={[Function]}
+      >
+        <Styled(Text)>
+          woo 1
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio) />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)
+        last={true}
+        onPress={[Function]}
+      >
+        <Styled(Text)>
+          woo 2
+        </Styled(Text)>
+        <Styled(Right)>
+          <Styled(Radio)
+            selected={true}
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+    </Styled(List)>
+  </Styled(Content)>
+</Styled(Container)>
+`;

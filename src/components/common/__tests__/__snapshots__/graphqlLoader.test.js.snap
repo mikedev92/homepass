@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`graphqlLoader matches snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#999999"
+    hidesWhenStopped={true}
+    size="small"
+  />
+</View>
+`;
+
+exports[`graphqlLoader matches snapshot 2`] = `
+<Component
+  data={
+    Object {
+      "loading": false,
+    }
+  }
+/>
+`;
+
+exports[`graphqlLoader matches snapshot 3`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Styled(Text)>
+    {
+      "this": "IS SOME CRAZY ERROR"
+    }
+  </Styled(Text)>
+  <Styled(Button)
+    block={true}
+    light={true}
+    onPress={[Function]}
+    outline={true}
+  >
+    <Styled(Text)>
+      retry
+    </Styled(Text)>
+  </Styled(Button)>
+</View>
+`;

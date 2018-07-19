@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpaceMemberships /> matches snapshots 1`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body)>
+      <Styled(Title)>
+        Membership
+      </Styled(Title)>
+    </Styled(Body)>
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)>
+    <Styled(ListItem)
+      itemHeader={true}
+    />
+    <Styled(List)>
+      <Styled(ListItem)
+        icon={true}
+        last={false}
+        onPress={[Function]}
+      >
+        <Styled(Body)>
+          <Styled(Text)>
+            Visibility
+          </Styled(Text)>
+        </Styled(Body)>
+        <Styled(Right)>
+          <Styled(Text)>
+            Open
+          </Styled(Text)>
+          <Styled(Icon)
+            name="arrow-forward"
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)
+        icon={true}
+        last={true}
+        onPress={[Function]}
+      >
+        <Styled(Body)>
+          <Styled(Text)>
+            Membership Requests
+          </Styled(Text)>
+        </Styled(Body)>
+        <Styled(Right)>
+          <Styled(Badge)>
+            <Styled(Text)>
+              1
+            </Styled(Text)>
+          </Styled(Badge)>
+          <Styled(Icon)
+            name="arrow-forward"
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+    </Styled(List)>
+    <Styled(ListItem)
+      itemHeader={true}
+    >
+      <Styled(Text)
+        caption={true}
+      >
+        MEMBERS
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(List)>
+      <Styled(ListItem)
+        last={false}
+        onPress={[Function]}
+      >
+        <Styled(Text)
+          primary={true}
+        >
+          Add Member
+        </Styled(Text)>
+      </Styled(ListItem)>
+    </Styled(List)>
+    <Styled(ListItem)
+      itemHeader={true}
+    >
+      <Styled(Text)
+        caption={true}
+      >
+        GUESTS
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(List)>
+      <Styled(ListItem)
+        last={true}
+        onPress={[Function]}
+      >
+        <Styled(Text)
+          primary={true}
+        >
+          Invite Guest
+        </Styled(Text)>
+      </Styled(ListItem)>
+    </Styled(List)>
+    <Styled(Content)
+      listPadding={true}
+    >
+      <Styled(Text)
+        caption={true}
+      >
+        Invite customers as guests to give theme a live mobile experience
+      </Styled(Text)>
+    </Styled(Content)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<SpaceMemberships /> matches snapshots 2`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body)>
+      <Styled(Title)>
+        Membership
+      </Styled(Title)>
+    </Styled(Body)>
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)>
+    <Styled(ListItem)
+      itemHeader={true}
+    />
+    <Styled(List)>
+      <Styled(ListItem)
+        icon={true}
+        last={true}
+        onPress={[Function]}
+      >
+        <Styled(Body)>
+          <Styled(Text)>
+            Visibility
+          </Styled(Text)>
+        </Styled(Body)>
+        <Styled(Right)>
+          <Styled(Text)>
+            Secret
+          </Styled(Text)>
+          <Styled(Icon)
+            name="arrow-forward"
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+    </Styled(List)>
+    <Styled(ListItem)
+      itemHeader={true}
+    >
+      <Styled(Text)
+        caption={true}
+      >
+        MEMBERS
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(List)>
+      <Styled(ListItem)
+        last={false}
+        onPress={[Function]}
+      >
+        <Styled(Text)
+          primary={true}
+        >
+          Add Member
+        </Styled(Text)>
+      </Styled(ListItem)>
+      <Swipeout
+        backgroundColor="transparent"
+        disabled={false}
+        right={
+          Array [
+            Object {
+              "backgroundColor": "#d9534f",
+              "onPress": undefined,
+              "text": "Delete",
+            },
+          ]
+        }
+        rowID={-1}
+        sectionID={-1}
+        sensitivity={50}
+      >
+        <Styled(ListItem)
+          avatar={true}
+          last={true}
+        >
+          <Styled(Left)>
+            <Styled(Thumbnail)
+              small={true}
+              source={
+                Object {
+                  "uri": "Image",
+                }
+              }
+            />
+          </Styled(Left)>
+          <Styled(Body)>
+            <Styled(Text)>
+              Name
+            </Styled(Text)>
+          </Styled(Body)>
+        </Styled(ListItem)>
+      </Swipeout>
+    </Styled(List)>
+    <Styled(ListItem)
+      itemHeader={true}
+    >
+      <Styled(Text)
+        caption={true}
+      >
+        GUESTS
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(List)>
+      <Styled(ListItem)
+        last={true}
+        onPress={[Function]}
+      >
+        <Styled(Text)
+          primary={true}
+        >
+          Invite Guest
+        </Styled(Text)>
+      </Styled(ListItem)>
+    </Styled(List)>
+    <Styled(Content)
+      listPadding={true}
+    >
+      <Styled(Text)
+        caption={true}
+      >
+        Invite customers as guests to give theme a live mobile experience
+      </Styled(Text)>
+    </Styled(Content)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<SpaceMemberships /> matches snapshots 3`] = `
+<Styled(Container)
+  backgroundDark={true}
+>
+  <Styled(Header)
+    bordered={true}
+  >
+    <Styled(Left)>
+      <Styled(Button)
+        onPress={[Function]}
+        primary={true}
+        transparent={true}
+      >
+        <Styled(Icon)
+          name="arrow-back"
+        />
+      </Styled(Button)>
+    </Styled(Left)>
+    <Styled(Body)>
+      <Styled(Title)>
+        Membership
+      </Styled(Title)>
+    </Styled(Body)>
+    <Styled(Right) />
+  </Styled(Header)>
+  <Styled(Content)>
+    <Styled(ListItem)
+      itemHeader={true}
+    />
+    <Styled(List)>
+      <Styled(ListItem)
+        icon={true}
+        last={false}
+        onPress={[Function]}
+      >
+        <Styled(Body)>
+          <Styled(Text)>
+            Visibility
+          </Styled(Text)>
+        </Styled(Body)>
+        <Styled(Right)>
+          <Styled(Text)>
+            Private
+          </Styled(Text)>
+          <Styled(Icon)
+            name="arrow-forward"
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+      <Styled(ListItem)
+        icon={true}
+        last={true}
+        onPress={[Function]}
+      >
+        <Styled(Body)>
+          <Styled(Text)>
+            Membership Requests
+          </Styled(Text)>
+        </Styled(Body)>
+        <Styled(Right)>
+          <Styled(Badge)>
+            <Styled(Text)>
+              2
+            </Styled(Text)>
+          </Styled(Badge)>
+          <Styled(Icon)
+            name="arrow-forward"
+          />
+        </Styled(Right)>
+      </Styled(ListItem)>
+    </Styled(List)>
+    <Styled(ListItem)
+      itemHeader={true}
+    >
+      <Styled(Text)
+        caption={true}
+      >
+        MEMBERS
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(List)>
+      <Styled(ListItem)
+        last={true}
+        onPress={[Function]}
+      >
+        <Styled(Text)
+          primary={true}
+        >
+          Add Member
+        </Styled(Text)>
+      </Styled(ListItem)>
+    </Styled(List)>
+    <Styled(ListItem)
+      itemHeader={true}
+    >
+      <Styled(Text)
+        caption={true}
+      >
+        GUESTS
+      </Styled(Text)>
+    </Styled(ListItem)>
+    <Styled(List)>
+      <Styled(ListItem)
+        last={true}
+        onPress={[Function]}
+      >
+        <Styled(Text)
+          primary={true}
+        >
+          Invite Guest
+        </Styled(Text)>
+      </Styled(ListItem)>
+    </Styled(List)>
+    <Styled(Content)
+      listPadding={true}
+    >
+      <Styled(Text)
+        caption={true}
+      >
+        Invite customers as guests to give theme a live mobile experience
+      </Styled(Text)>
+    </Styled(Content)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
